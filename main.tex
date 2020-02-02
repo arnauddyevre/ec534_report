@@ -1,0 +1,209 @@
+
+\documentclass{amsart}
+
+\usepackage{graphicx}
+%\usepackage[altbullet]{lucidabr}
+%two lines below change font (font intalled manually (i.e. uploaded))
+%\usepackage{fontspec}
+%\setmainfont[Ligatures=TeX]{LucidaBrightRegular.ttf}
+%\usepackage{kpfonts}    % for nice fonts
+% option [light] for more aery documents
+\usepackage{color}  %for color of references
+\usepackage[dvipsnames]{xcolor} %for color of references
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage[pagebackref,colorlinks, citecolor=BlueViolet,urlcolor=BlueViolet]{hyperref}
+\hypersetup{colorlinks = BlueViolet, allcolors = BlueViolet}
+\usepackage[nameinlink,noabbrev]{cleveref} 
+\usepackage{natbib}
+\usepackage{multicol}
+\usepackage{multirow}
+%\usepackage{lscape}
+\usepackage{pdflscape}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{longtable}
+\usepackage{colortbl}
+\usepackage{dsfont}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{pgf}
+\usepackage{tikz}
+\usepackage{soul}
+\usepackage{tikz}
+\usepackage{tikz,fullpage}
+\usepackage{pgf}
+\usepackage{tikz}
+\usepackage{bbm} %for the indicator function
+\usetikzlibrary{shapes.geometric, arrows} %to create flow charts
+\usepackage{bold-extra} %for bold small caps in the title
+\usepackage{dirtree} % to create lists as tree
+
+%\renewcommand{\familydefault}{\sfdefault} %for the sans serif font
+
+%AMS original setup for mathematical elements
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{xca}[theorem]{Exercise}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+%    Absolute value notation
+\newcommand{\abs}[1]{\lvert#1\rvert}
+
+%    Blank box placeholder for figures (to avoid requiring any
+%    particular graphics capabilities for printing this document).
+\newcommand{\blankbox}[2]{%
+  \parbox{\columnwidth}{\centering
+%    Set fboxsep to 0 so that the actual size of the box will match the
+%    given measurements more closely.
+    \setlength{\fboxsep}{0pt}%
+    \fbox{\raisebox{0pt}[#2]{\hspace{#1}}}%
+  }%
+}
+
+%Tikz setup for a flow chart
+\tikzstyle{modelblock} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=white, text ragged]
+
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\begin{document}
+
+\title{EC534 - Referee Report}
+
+%    Information for first author
+\author{Arnaud Dy\`evre}
+%\address{}
+%\curraddr{}
+%\email{a.dyevre@lse.ac.uk}
+%\thanks{}
+
+%    Information for second author
+%\author{}
+%\address{}
+%\email{}
+%\thanks{}
+
+%    General info
+%\subjclass[2000]{}
+
+%\date{\today. First created October 19, 2019}
+
+%\dedicatory{}
+%\keywords{}
+
+%\begin{abstract}
+
+%\end{abstract}
+
+\maketitle
+
+\begin{center}
+Student number: 201324680
+\end{center}
+
+
+\vspace{12pt}
+
+I am refereeing ``The rise of Market Power and Macroeconomic implications'' (November 2019 version) by Jan De Loecker, Jan Eeckhout and Gabriel Unger. The paper is forthcoming in the \textit{Quarterly Journal of Economics}.
+
+%% The correct journal style for \specialsection is all uppercase; a known bug
+%% in amsart.cls prevents this, so input must be uppercase until it is fixed.
+%\specialsection*{This is a Special Section Head}
+%\specialsection*{THIS IS A SPECIAL SECTION HEAD}
+%This is an example of a special section head%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\footnote{Here is an example of a footnote. Notice that this footnote text is running on so that it can stand as an example of how a footnote with separate paragraphs should be written.
+%\par
+%And here is the beginning of the second paragraph.}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+
+\section{Method}
+
+\begin{itemize}
+    \item Go through paper
+    \item Go through James Traina's paper
+    \item Go through the note accompanying the paper on Jan de Loecker's website
+    \item Go through the JEL papers
+\end{itemize}
+
+\section{Summary of the paper}
+
+The paper is an ambitious empirical exercise attempting to document the rise in market power in the US. It uses a novel and microfounded estimation strategy to show that aggregate markups have gone up from a fifth of marginal cost to three fifth of marginal cost over 1955-2010. Importantly, the rise in markups is \hl{entirely driven} by a reallocation of sales shares from low-marl-kup firm to high-markup firms.\\
+
+The paper uses data on publicly listed firms and on \hl{the universe of firms in the industrial sector} to support this thesis.\\
+
+Its main contributions are to (i) , (ii) and (iii).
+
+\section{Major comments}
+
+\section{Minor comments}
+
+\section{Suggested extension}
+
+Important economic question, spurred by the rise of firm profit shares, in particular for large firms.\\
+
+Causes of rising markups: technology. For instance Amazon, incredibly productive, gets a large market share and then capture larger market share. ``Amazon paradox'', price is low but could be much lower. Market structure: options but all coming from the same producer.\\
+
+Consequences: Decline in business dynamism. Wage stagnation (wage as a share of GDP). Aggregate decline in the labour share. Reallocation of sales from low markups firms to superstar high markups firms.\\
+
+Cost-based method from Bob Hall (1988), less demanding on the data. \\
+
+Distinction between markup and market power. Market power should also take into account fixed costs.\\
+
+Fact 1: heterogeneity in markups. Median is fairly flat. But sales-weighted increase, and top tail is mostly responsible for it. Rise for a few firms, not for all firms.\\
+
+Fact 2: reallocation. Markup weighted by sales, vs. total costs. Olley-Pakes decomposition for weight and. Total markup: change due to the distribution initially a third increases and then declines, so mostly due to the fact that more business going to high firms vs. low firms. Net entry. Driven by change in market share = superstar effect. \\
+
+Idea for paper: show what is the impact of network formation on rise of markups, compare to superstar, net entry, etc...\\
+
+Fact 3: change in technology. Overhead cost has gone up -> important to explaining the Amazon paradox. Amazon invests A LOT. Positive relationship between marups and fixed costs. Firms that invest heavily make excess profits.\\
+
+Mention Basile Grassi.\\
+
+Fact 4: issue about the magnitude of the increase. Bob Hall: lesser increase when computing increase at the sector level. But what matters is the micro data. Aggregation is important! Jensen's inequality. A lot of the heterogeneity is within sector. Profit rate does not increase much though (7pp vs 40pp). But need to account for the change in technology.\\
+
+Publicly traded firms are 40\% of GDP.\\
+
+Role of regulation?. Similar trend in publicly traded firms around the world. \\
+
+\textbf{Model}. Builds on Atkinson-Burstein (2008). Technology here means change in fixed cost. Productivity shocks embody the ``Amazon effect''.\\
+
+Note that increased markups have negative effects on welfare, but positive productivity effect, either positive of negative selection effect of selection. Endogeneous labour supply: negative effect. Households work less.\\
+
+\textbf{Macroeconomic consequences}. Fact 1: decline in labour dynamism. Price reflect marginal cost in competitive market. In monopolistic market, less pass through from input and to consumer. In market with market power, firm adjust to productivity shock much less. Decline in labour dynamism, driven by rise in market power.\\
+
+Fact 2: wage stagnation. Shift in labour demand, firm with high markups lowers quantity in labour demanded. Driven by equilibrium effect through fact that output market is non-competitive. No input market not being competitive! No monopsony!\\
+
+Fact 3: decline in labour share. At firm level, important. Firms with higher markups should demand less, so produce less, at individual firm level. Can write labour share as elasticity of labour divided by ... Estimate that elasticity is fairly stable, but rise in markups, should decline demand in labour. regression of labour share on markups: negative. In aggregate, rise in markups lead to decrease in labour share.\\
+
+Two thirds of rise in markups come from reallocation.\\
+
+
+
+
+
+\textbf{References}. Notes on Jan De Loecker's website. Special issue of the JEP.\\
+
+
+Debate about the measurement of 
+
+\newpage
+
+\bibliographystyle{ecta}
+\bibliography{bibliography}
+
+\newpage
+
+\section*{Appendix}
+
+\end{document}
+
+%------------------------------------------------------------------------------
+% End of journal.tex
+%------------------------------------------------------------------------------
