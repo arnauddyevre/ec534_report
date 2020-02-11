@@ -128,6 +128,7 @@ I am refereeing ``The rise of Market Power and Macroeconomic implications'' (Nov
 \begin{itemize}
     \item Go through paper
     \item Go through James Traina's paper
+    \item Read Basu (2019)
     \item Go through the note accompanying the paper on Jan de Loecker's website
     \item Go through the JEL papers
 \end{itemize}
@@ -136,7 +137,7 @@ I am refereeing ``The rise of Market Power and Macroeconomic implications'' (Nov
 
 The paper is an ambitious empirical exercise attempting to document the rise in market power in the US. It uses a novel and microfounded estimation strategy to show that aggregate markups were stable at around a fifth of marginal cost from 1955 to 1980, but they increased to three fifth of marginal cost over 1980-2016. The overall rise in markups is driven by a combination o two effects: the upper tail of the markup distribution has fattened, and high markup firms have captured a larger share of sales. These effects account for 1/3 and 2/3 of the aggregate increase, respectively.\\
 
-The paper uses data on publicly listed firms and on the universe of firms observed in the US Censuses to support this thesis.\\
+The paper uses data on publicly listed firms and on the universe of firms observed in the US Manufacturing, retail and Wholesale Censuses to support this thesis.\\
 
 The paper addresses several criticism related to what the increase in aggregate markups may capture, beyond market power such as a rise in fixed costs, 
 
@@ -161,13 +162,25 @@ To compute markups, researchers need to get an estimate of marginal costs. When 
 
 A crucial component of this formula is thus the output elasticity $\epsilon_{i t}^v$. These elasticities are sector and time-specific.\\
 
+\subsection*{Comparison with other methods} The method is relatively new, and the cost-minimisation assumption is not entirely standard. One area of 
+
+\subsubsection{Aggregation} A contentious part of the paper pertains to how firm-level markups are being aggregated. they calculate aggregate markups as
+
+$$ \mu_{t}=\sum_{i} m_{i t} \mu_{i t} $$ 
+
+where $m_{it}$ is the weight of firm $i$ at $t$. The authors use the sales share of firms as weights. But they show that if input weights are used instead, the rise of markup still holds, but the rise is less pronounced. This result is consistent with the theory: if market power increases, quantity sold and inputs used decrease, but total sales increase through higher prices. Thus using input shares understate the magnitude of markups.\\
+
+\subsection*{Sumary of the robustness checks} Show formula with all changes done by the authors (PF1, PF2, etc...) (see section 4).
+
 \section{Relevance}
 
-The paper's relevance cannot be understated.\\
+\subsection*{Explaining several important secular trends} The paper's relevance cannot be understated. By the authors' account, the rise of markups can explain the fall in labour income, the decline in low-skill wages, the decline in labour force participation, the decline in geographical and inter-firm mobility, and the slowdown in productivity growth. Irrespective of the solidity of the empirical evidence, a single unified explanation for all these phenomena is worthy of exploration. \\
 
-Large, high-markup firms tend to have lower labour shares. This follows mechanically from the firm's optimisation problem that high markups lead to lower expenditure on inputs like labour. Combining this observation with their increased weight in the US economy in terms of sales can allow us to make sense of the secular decline in the labour share. This echoes the findings of \cite{autor2017fall} and \cite{kehrig2017growing}. The authors argue that increased market power is the cause behind the rise of markups and the diminution of the labour share of income.\\
+Large, high-markup firms tend to have lower labour shares. This follows mechanically from the firm's optimisation problem that high markups lead to lower expenditure on inputs like labour. Combining this observation with their increased weight in the US economy in terms of sales can allow us to make sense of the secular decline in the labour share. This echoes the findings of \cite{autor2019fall} and \cite{kehrig2017growing}. The authors argue that increased market power is the cause behind the rise of markups and the diminution of the labour share of income.\\
 
 The paper remains silent about the causes of the rise in market power (technology? change in market structure due to the decline in antitrust enforcement).
+
+\subsection*{Explaining the great moderation} The rise of markups documentaed by the authors could explain the apparent stagnation in American productivity growth since the 1970s. A firm with higher market power can charge higher prices and sell lower quantities, moving up the demand curve. This leads measured GDP to be lower. Hence GDP growth will be constantly lower is markups are steadily increasing.\\
 
 \section{Main findings}
 
@@ -175,7 +188,84 @@ The paper remains silent about the causes of the rise in market power (technolog
 
 \section{Major comments}
 
-\subsubsection{Important contribution in the measurement of firm-level markups} The Herfindalh-Hirschman Index (HHI) is inadequate to study markups over time and space as it depends on the definition of a market. \cite{de2019rise}
+The paper opens itself to two types of criticisms: methodological and theoretical. The methodological concerns are about aggregation and how the share of inputs is calculated.
+
+\subsection*{Important contribution in the measurement of firm-level markups} The Herfindalh-Hirschman Index (HHI) is inadequate to study markups over time and space as it depends on the definition of a market. \cite{de2019rise} \\
+
+\subsection*{Precision of the measure of markups} One suspects that these measures of markup are very volatile, as seen from the decomposition of aggregate markups
+
+\subsection*{Use of share of sales as weights} This assumption seems discutable. The authors defend this assumption for the three following reasons: as reallocation of sales toward high-markup firms seems to be the driving force behind rising aggregate market power using input shares as weights would miss this trend, profits rates are aggregated with sales shares, and revenue weighting is used in the calculation of macroeconomic indicators such as GDP. These reasons are not entirely convincing. \\
+
+One graph that did not survive in the latest version of the paper shows how important the choice of weights is when aggregating markups from the firm level to an economy-wide average. In the 2017 NBER working paper version, the authors find that the sales share-weighted average of markups is actually lower than the unweighted average. I have reported the series in \ref{fig:unweighted} below. This is counter-intuitive as one would expect the weighted average to be larger than the unweighted one if high markup firms are also those with the largest sales share. This would be consistent with the theoretical prediction of a model of oligopolistic Cournot competition, and with empirical findings from recent papers on the superstar firm \cite{autor2019fall}.
+
+\begin{figure}[h!]
+    \centering
+    \begin{tabular}{c}
+        \includegraphics[width=0.8 \textwidth]{unweighted_markups.PNG}
+    \end{tabular}
+    \centering
+    \caption{Unweighted versus weighted markups \\ Figure 2(a) from \cite{deloecker2017rise}}
+    \label{fig:unweighted}
+\end{figure}
+
+One way to reconcile this finding is to assume that firms with really high markups are in smaller sectors in terms of GDP, and that the difference in market shares in the sector with the highest markup spread is not large. Consider the following simple example: there are two firms in manufacturing, and two firms in farming, the farming firms charge markups of 2 and 1.1, and they represent 11 and 9\% of all sales in the economy respectively. In manufacturing, the biggest firm charges markups of 1.4 and the smallest 1.04, they weight 60 and 20\%. The unweighted average markup is 1.385, the weighted one is 1.403. In sum, the heterogeneity of firms distributions across sectors is what is driving the result. With this observation, we have two options: either conclude that the markups measured by De Loecker and co-authors capture something different from market power, or question the merits of aggregation of such different sectors.\footnote{Another possibility is that small firms charge higher markups, but this would be inconsistent with the aforementioned evidence on superstar firms.}\\
+
+But the authors actually report in the appendix that markups are \textbf{negatively} correlated with size of sales, employment and cost of goods sold. This is a direct contradiction of the superstar firm effect. A closer look at the selection of firm markups reveal that Apple, AT\&T and Microsoft all experienced a decrease in markups. In the NBER working paper version of the paper, they document that markups are negatively correlated with size across industries, but positively correlated with size within. This highlights again the importance of sector heterogeneity. This seems to be an important characterisation of their finding and I believe it would have deserved more discussion in the body of the paper. \\
+
+\subsection*{Comparison with the evolution of industry-level markups}. A welcome addition to the most recent version of the paper consists of the comparison of the DLEU results with those of \cite{hall2018new}. The reason why industry-level markups do not experience as high a rise is Jensen's inequality.
+
+\subsection*{High markups for the Census-based analyses} In section 3.4., the authors apply their methodology to three Censuses of firms in the US: wholesale, manufacturing and retail. The aim of this section is to confirm the rise of markups observed in the Compustat data. The authors estimate markups that go up to 40 times the marginal cost (for the 90\textsuperscript{th} percentile of retail firms). Instead of strengthening their results, this questions the validity of their method. The pattern for the wholesale sector directly contradicts their earlier analysis. \\
+
+Furthermore, the different ways in which output elasticities are computed cast doubt on the comparability of the results.\\
+
+This issue is key and it has implications when estimating the welfare consequences of high markups. \cite{davis2006volatility} for instance document that publicly traded firms represents only one third of US total sales and employment, excluding self-employed and farm workers. If financial institutions and insurance companies are excluded, as the authors do in appendix 10, the sample of firms they end up with may be very different from the real economy.\fottnote{The case should also be made to exclude utility firms, which have heavily regulated prices} The author document that markups are increasing only for the top 10\% of firms in terms of revenue in this sample of firms accounting for 1/3 of sale. Furthermore, the authors document that 1/3 of this increase in markups is actually due to larger overhead costs. Assuming that a representative consumer shops a basket of goods reflecting the revenue shares of companies, a back-of-the-envelope calculation suggests that their purchasing power decreased on $10\% \times \dfrac{1}{3} \times \dfrac{2}{3} = 2.2\%$ of their purchases, due to increased market power.\\
+
+Using a re-weighting of the publicly listed firms in \textit{Compustat} to build a representative sample of the American economy, \cite{traina2018aggregate} finds that markups are flat or even decreasing over time.\\
+
+\subsection*{The rise of overhead costs} This is addressed in the paper.\\
+
+Their figure 8 reports profits since the 1980s and the trend is clearly increasing. They report total profit rates since the 1960s in the appendix and one can clearly see that they spike in the 1970s. The authors explain this by lower capital expenditures in a period of high inflation. They show the gross profit time series (without substracting capital expenditure) and find that there is no spike in profits in the 1970s. Yet gross profits are as high in the 1960s as in the 2000s, two periods that the authors have opposed throughout the paper. This part of the paper is not entirely convincing.\\
+
+\subsection{Cross-validation of the measure of markups} Because the methodology used by the author is so cutting edge and has rarely been used before, we may be worried that it captures something else than market power. The authors provide helpful cross-validation of this measure by comparing it to other suggestive measures of market power: profit rates, market value as a share of sales, dividends. This supporting evidence is helpful in making the case that higher markups are not simply a response to higher fixed costs.\\
+
+\subsection*{Inconsistency between the estimated markups and implied profit rates} See critique from \cite{basu2019price} and response in paper (\hl{Not that interesting}).\\
+
+\cite{traina2018aggregate} suggests to use both fixed and variable costs when estimating markups. The authors dismiss this alternative measure as another measure of profit rates.\\
+
+\subsection*{Implications for the fall of the labour share} One of the most interesting implication of the empirical findings documented in the paper is the relationship between the rise of aggregate markups and the fall of the labour share.\\
+
+\subsection{Transparence of results} The analysis has been around for several years now.
+
+\subsection*{Profits of US multinationals as a flawed measure} See here https://marginalrevolution.com/marginalrevolution/2017/07/american-corporate-profits-really-high.html
+
+\subsection*{Problem when new products are introduced} A lot of firms such as Google and Facebook have actually lowered margins compared to the status quo ante.
+
+\subsection*{The role of globalisation} Tax evasion. maybe market power has increased because...\\
+Also, some American sectors such as manufacturing are fiercely competing with China, yet the authors report an increase of markups in all industries. It is hard to square evidence from trade with their thesis.\\
+
+Sceptical blog post here https://www.adamsmith.org/blog/margins-and-monopoly.
+
+\subsection*{Comparison with other estimates in the literature} This section (6.5) is too short and would have benefitted from a longer discussion in the paper. This paper is first and foremost methodological, so the macroeconomic implications could have been shortened. More space for robustness checks and comparison would have been helpful.\\
+
+\subsection*{Key critique - Inclusion of marketing and management costs} There has been some criticisms of the approach championed by \cite{de2019rise}. Most notably, \cite{traina2018aggregate} notes that if marketing and management costs are included in variable costs, the rise of markups is much more tamed. Marketing and management costs have been an increasing share of firms expenditure. Omitting them from the markup calculation as \cite{de2019rise} do understate costs and overstate both the level and the growth of markups. It makes more sense to use total total operating expenses as a measure of the cost of variable inputs. \cite{de2019rise} are effectively abstracting from all the costs that are necessary to bring the product to the consumer. The difference in the two markup estimations techniques is not driven by the choice of production function estimation, and thus not by the output elasticities of variable input. \\
+
+Including a more comprehensive measure of variable costs leads to an overestimation of their levels and their trend. To see this, it is easier to start from the equation of markups as obtained from the \textit{production approach}:
+$$\mu_{i t}=\epsilon_{i t}^v \frac{P_{i t} Q_{i t}}{P_{i t}^{V} V_{i t}}$$
+
+If some costs are omitted, and this omission is constant through time, then $P_{i t}^{V} V_{i t}$ is underestimated, thus raising the level of $\mu_{i t}$ across time periods. Omitting an input in the production function also biases the estimation of $\epsilon_{i t}^v$ upward, compounding this effect. Beyond the effect on the estimated levels of markup, omitting marketing expenditures leads one to overestimating  its increase after 1980. The reason is that marketing expenditures have steadily increased since the 1980s. Figure 
+
+
+\begin{center}
+    \begin{tabular}{m{8.5cm}m{8.5cm}}
+        \includegraphics[width=0.5 \textwidth]{ABCvariation.jpg} & \includegraphics[width=0.5\textwidth]{EFCvariation.jpg} \\ 
+    \end{tabular}
+    \centering
+    \caption{Unweighted versus weighted markups \\ Figure 2(a) from \cite{deloecker2017rise}}
+    \label{fig:unweighted}
+\end{center}
+
+\subsection*{Aggregation - Lack of differentiation in market analysis} Markets are heterogeneous in a number of dimensions and competition plays out differently in different markets. Some are subject to high entry costs (airlines), some have become less  competitive due to regulatory capture (broadband and communications), and some have been prone to collusion (chemicals). Concentration and market structure is an output of the competition process, and this process plays out very differently in different sectors. The IO literature has been sceptical of aggregating measures of market power across industries. The aggregation is a central tenet of the paper, but its legitimacy is questionable.\\
+
 
 \subsubsection{}
 
@@ -183,7 +273,13 @@ The paper remains silent about the causes of the rise in market power (technolog
 
 \section{Suggested extension}
 
+\subsection*{Input-output linkages}
+
 Important economic question, spurred by the rise of firm profit shares, in particular for large firms.\\
+
+\section*{Conclusion}
+
+\subsection{The many causes of the rise of market power} Ultimately, this article is a somewhat convincing piece of evidence that market power is rising in the US economy. As this question is multifaceted and hard to assess, the evidence documented by De Loecker and co-authors needs to be considered along with other bits of evidence that market power is rising. This includes increased market concentration \citep{autor2017concentrating}, rising profits \citep{barkai2019declining}, decreased investment \citep{gutierrez2017investment}, and large decreased labour share in concentrated markets \cite{azar2017labor}.
 
 Causes of rising markups: technology. For instance Amazon, incredibly productive, gets a large market share and then capture larger market share. ``Amazon paradox'', price is low but could be much lower. Market structure: options but all coming from the same producer.\\
 
