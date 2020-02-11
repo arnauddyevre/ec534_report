@@ -160,9 +160,11 @@ there are three approaches to estimating markups:
 
 To compute markups, researchers need to get an estimate of marginal costs. When using the production approach, this is made possible by stating the problem of the firm as a cost-minimisation one. The marginal cost thus naturally appears as the Lagrange multiplier in the cost-minimisation problem. Manipulating the first order condition of the firm allows researchers to express markups as a function of the revenue share of variable inputs and the output elasticity of variable input: $$\mu_{i t}=\epsilon_{i t}^v \frac{P_{i t} Q_{i t}}{P_{i t}^{V} V_{i t}}$$
 
-A crucial component of this formula is thus the output elasticity $\epsilon_{i t}^v$. These elasticities are sector and time-specific.\\
+A crucial component of this formula is thus the output elasticity $\epsilon_{i t}^v$. These elasticities are sector and time-specific. In this paper, they are estimated using a variant of the technique introduced by \cite{olley1996dynamics} to estimate production functions without imposing the assumption of constant return to scale. \\
 
-\subsection*{Comparison with other methods} The method is relatively new, and the cost-minimisation assumption is not entirely standard. One area of 
+\subsection*{Comparison with other methods} The method is relatively new, and the cost-minimisation assumption is not entirely standard. Most importantly, if a firm is minimising costs taking input prices as given, this implicitly assumes that firms do not have any wage-setting power. Recent evidence from the US economy show that this assumption may not be totally innocuous \citep{council2016labor}.\\
+
+\subsection*{Assumption of fixed marginal cost for all inputs} \cite{de2019rise} assume that marginal costs are constant across variable inputs. As marginal cost must be the same along each margin, it enables them to use all expenditures on inputs, including labour and intermediate materials, to calculate output elasticities. 
 
 \subsubsection{Aggregation} A contentious part of the paper pertains to how firm-level markups are being aggregated. they calculate aggregate markups as
 
@@ -174,9 +176,15 @@ where $m_{it}$ is the weight of firm $i$ at $t$. The authors use the sales share
 
 \section{Relevance}
 
+\subsection*{Generating economy-wide measures of aggregate markups} The main strength of the paper is to estimate an average markup for the entire US economy. IO scholars had estimated sector- or firm-specific markups before, but overall aggregate markup measures based on firm-level data has been a very recent endeavour.\\
+
+A related strength is the wide time-coverage of the markup measure.\\
+
 \subsection*{Explaining several important secular trends} The paper's relevance cannot be understated. By the authors' account, the rise of markups can explain the fall in labour income, the decline in low-skill wages, the decline in labour force participation, the decline in geographical and inter-firm mobility, and the slowdown in productivity growth. Irrespective of the solidity of the empirical evidence, a single unified explanation for all these phenomena is worthy of exploration. \\
 
 Large, high-markup firms tend to have lower labour shares. This follows mechanically from the firm's optimisation problem that high markups lead to lower expenditure on inputs like labour. Combining this observation with their increased weight in the US economy in terms of sales can allow us to make sense of the secular decline in the labour share. This echoes the findings of \cite{autor2019fall} and \cite{kehrig2017growing}. The authors argue that increased market power is the cause behind the rise of markups and the diminution of the labour share of income.\\
+
+The only issue with this argument is that the timing of their rise in markups does not correspond to that of the fall in the labour share. The labour share drops ralatively sharply in the 2000s but is rather stable before, yet their markup measure increases from the 1980s onward.\\
 
 The paper remains silent about the causes of the rise in market power (technology? change in market structure due to the decline in antitrust enforcement).
 
@@ -189,6 +197,8 @@ The paper remains silent about the causes of the rise in market power (technolog
 \section{Major comments}
 
 The paper opens itself to two types of criticisms: methodological and theoretical. The methodological concerns are about aggregation and how the share of inputs is calculated.
+
+\subsection*{Composition of the \textit{Compustat} sample} The authors document a positive relationship between markups and firm size within industries. But this source of changes in markups is not presented in the paper. While within firm variation in markups is shown, tyhe authors do not explain if the overall composition of the \textit{Compustat} sample changes over time.\\
 
 \subsection*{Important contribution in the measurement of firm-level markups} The Herfindalh-Hirschman Index (HHI) is inadequate to study markups over time and space as it depends on the definition of a market. \cite{de2019rise} \\
 
@@ -252,19 +262,21 @@ Sceptical blog post here https://www.adamsmith.org/blog/margins-and-monopoly.
 Including a more comprehensive measure of variable costs leads to an overestimation of their levels and their trend. To see this, it is easier to start from the equation of markups as obtained from the \textit{production approach}:
 $$\mu_{i t}=\epsilon_{i t}^v \frac{P_{i t} Q_{i t}}{P_{i t}^{V} V_{i t}}$$
 
-If some costs are omitted, and this omission is constant through time, then $P_{i t}^{V} V_{i t}$ is underestimated, thus raising the level of $\mu_{i t}$ across time periods. Omitting an input in the production function also biases the estimation of $\epsilon_{i t}^v$ upward, compounding this effect. Beyond the effect on the estimated levels of markup, omitting marketing expenditures leads one to overestimating  its increase after 1980. The reason is that marketing expenditures have steadily increased since the 1980s. Figure 
+If some costs are omitted, and this omission is constant through time, then $P_{i t}^{V} V_{i t}$ is underestimated, thus raising the level of $\mu_{i t}$ across time periods. Omitting an input in the production function also biases the estimation of $\epsilon_{i t}^v$ upward, compounding this effect. Beyond the effect on the estimated levels of markup, omitting marketing expenditures leads one to overestimating  its increase after 1980. The reason is that marketing expenditures have steadily increased since the 1980s. Figure \ref{fig:traina} shows ``'Costs of Goods Solds' (COGS), the measure of variable costs used by \cite{de2019rise} as a share of total expenditures and how aggregate markups change when using total expenditure instead.\\ 
 
-
-\begin{center}
-    \begin{tabular}{m{8.5cm}m{8.5cm}}
-        \includegraphics[width=0.5 \textwidth]{ABCvariation.jpg} & \includegraphics[width=0.5\textwidth]{EFCvariation.jpg} \\ 
+\begin{figure}[h!]
+    \begin{tabular}{cc}
+        \includegraphics[width=0.48 \textwidth]{shareCOGS.PNG} & \includegraphics[width=0.48 \textwidth]{markups.PNG} \\ 
     \end{tabular}
-    \centering
-    \caption{Unweighted versus weighted markups \\ Figure 2(a) from \cite{deloecker2017rise}}
-    \label{fig:unweighted}
-\end{center}
+\caption{Share of ``Cost of Goods Sold'' in total expenditures (left)  \& resulting markups (right) \\ figures 2 and 4 from  \cite{traina2018aggregate}}
+\label{fig:traina}
+\end{figure}
+
+In a response to various comments raised by their initial work \citep{de2018some}, the authors defend their choice of COGS as a measure of variable input by arguing that SG\&A reflects fixed costs and thus does not adjust immediately. R\&D expenditure, marketing and advertising are long-term endeavour and they should not be used when calculating output elasticities or the ratio of variable costs to total sales. They argue that his measure of markups is not capturing markups but something closer to operation profit rate. According to them, this requires us to assume that overhead costs adjust flexibly and are perfect substitutes with traditional variable inputs in COGS. This assumption does not seem ill-founded to me. Increasing sales can be achieved through larger input quantities or more lreliable delivery, more aggressive marketing, etc. In particular, these inputs in the production process are more substitutable the large time horizon one considers.\\
 
 \subsection*{Aggregation - Lack of differentiation in market analysis} Markets are heterogeneous in a number of dimensions and competition plays out differently in different markets. Some are subject to high entry costs (airlines), some have become less  competitive due to regulatory capture (broadband and communications), and some have been prone to collusion (chemicals). Concentration and market structure is an output of the competition process, and this process plays out very differently in different sectors. The IO literature has been sceptical of aggregating measures of market power across industries. The aggregation is a central tenet of the paper, but its legitimacy is questionable.\\
+
+Importantly, this measure of markups lead to an unambiguous positive relationship between markups and firm size, across sectors.\\
 
 
 \subsubsection{}
@@ -276,6 +288,8 @@ If some costs are omitted, and this omission is constant through time, then $P_{
 \subsection*{Input-output linkages}
 
 Important economic question, spurred by the rise of firm profit shares, in particular for large firms.\\
+
+\subsection*{Linking higher markups to innovation rates} Higher fixed costs and higher markups mean that taking the incumbent's position as a market leader has become a more profitable goal. Given the richness of the \textit{Compustat} data, it is a shame that the authors did not relate their markup measure to innovation. two questions would be interesting to address: does innovation by incumbent decrease with higher markups? And does innovation by challenging firms increase? An effort in this direction is the works of \cite{aghion2008competition} and \cite{aghion2019theory} who find that there is an inverted U-shape relationship between productivity growth and markups.
 
 \section*{Conclusion}
 
